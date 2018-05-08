@@ -1,5 +1,8 @@
 #pragma once
+
 #include "SDL.h"
+#include "SDL_image.h"
+#include "Texture_Manager.h"
 #include <iostream>
 
 class Game
@@ -18,7 +21,9 @@ public:
 	bool is_running;
 
 private:
+	const char * title = "Captin Dutch Adventures";
 	SDL_Window * window;
 	SDL_Renderer * renderer;
+	SDL_Texture * test;
 };
 
