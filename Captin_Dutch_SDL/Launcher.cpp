@@ -5,8 +5,8 @@ int main(int argc, char *argv[])
 {
 
 	// window variables
-	const int window_width = 900;
-	const int window_height = 600;
+	const int window_width = 1600;
+	const int window_height = 900;
 	bool fullscreen = false;
 
 	// loop variables

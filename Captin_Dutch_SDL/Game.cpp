@@ -42,7 +42,8 @@ void Game::init(int xpos, int ypos, int width, int height, bool fullscreen)
 		}
 
 		SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-		test = Texture_Manager::load_texture("assets/BOAR.BMP", this->renderer);
+		background = new Game_Entity("assets/background.jpg", renderer, 0, 0);
+		trump = new Game_Entity("assets/TRUMP.jpg", renderer, 100, 100);
 
 	}
 }
@@ -58,7 +59,13 @@ void Game::handle_events(void)
 	case SDL_QUIT:
 		this->is_running = false;
 		break;
+
+	case SDLK_UP:
+		this->trump->x ++;
 	}
+
+	
+
 	
 }
 
@@ -66,6 +73,7 @@ void Game::handle_events(void)
 void Game::update(void)
 {
 
+	trump->update();
 }
 
 
@@ -73,7 +81,8 @@ void Game::render(void)
 {
 	
 	SDL_RenderClear(this->renderer);
-	SDL_RenderCopy(this->renderer, this->test, NULL, NULL);
+	background->render();
+	trump->render();
 	SDL_RenderPresent(this->renderer);
 
 }

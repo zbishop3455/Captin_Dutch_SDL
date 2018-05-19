@@ -8,3 +8,7 @@ SDL_Texture * Texture_Manager::load_texture(const char * path, SDL_Renderer * re
 	SDL_FreeSurface(temp_surface);
 	return loaded_texture;
 }
+
+
+
+

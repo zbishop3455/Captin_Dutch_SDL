@@ -10,5 +10,6 @@ class Texture_Manager
 public:
 
 	static SDL_Texture * load_texture(const char* path, SDL_Renderer* renderer);
+
 };
 

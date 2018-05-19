@@ -1,9 +1,10 @@
 #pragma once
-
+#include <iostream>
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Texture_Manager.h"
-#include <iostream>
+#include "Entity.h"
+#include "Game_Entity.h"
 
 class Game
 {
@@ -25,5 +26,7 @@ private:
 	SDL_Window * window;
 	SDL_Renderer * renderer;
 	SDL_Texture * test;
+	Entity * background;
+	Entity * trump;
 };
 
