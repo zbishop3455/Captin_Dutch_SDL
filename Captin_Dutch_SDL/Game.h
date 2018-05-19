@@ -3,8 +3,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Texture_Manager.h"
-#include "Entity.h"
-#include "Game_Entity.h"
+#include "ECS/ECS.h"
 
 class Game
 {
@@ -26,7 +25,6 @@ private:
 	SDL_Window * window;
 	SDL_Renderer * renderer;
 	SDL_Texture * test;
-	Entity * background;
-	Entity * trump;
+	Manager manager;
 };
 

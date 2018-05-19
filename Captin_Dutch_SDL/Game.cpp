@@ -42,9 +42,6 @@ void Game::init(int xpos, int ypos, int width, int height, bool fullscreen)
 		}
 
 		SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-		background = new Game_Entity("assets/background.jpg", renderer, 0, 0);
-		trump = new Game_Entity("assets/TRUMP.jpg", renderer, 100, 100);
-
 	}
 }
 
@@ -60,8 +57,8 @@ void Game::handle_events(void)
 		this->is_running = false;
 		break;
 
-	case SDLK_UP:
-		this->trump->x ++;
+	default:
+		break;
 	}
 
 	
@@ -73,7 +70,6 @@ void Game::handle_events(void)
 void Game::update(void)
 {
 
-	trump->update();
 }
 
 
@@ -81,8 +77,6 @@ void Game::render(void)
 {
 	
 	SDL_RenderClear(this->renderer);
-	background->render();
-	trump->render();
 	SDL_RenderPresent(this->renderer);
 
 }

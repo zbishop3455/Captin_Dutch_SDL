@@ -150,17 +150,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Component.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Game_Entity.cpp" />
     <ClCompile Include="Launcher.cpp" />
     <ClCompile Include="Texture_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Component.h" />
+    <ClInclude Include="ECS\ECS.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="Game_Entity.h" />
     <ClInclude Include="Texture_Manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
